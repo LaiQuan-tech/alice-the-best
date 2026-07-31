@@ -211,6 +211,23 @@
     padding:1px 8px;letter-spacing:.02em;white-space:normal;}
   .slide.dark .tbd{color:var(--gold-bright);background:rgba(227,201,143,.12);border-color:rgba(227,201,143,.55);}
 
+  /* ---------- 矮螢幕（投影機 720p / 小筆電）：只在這裡收緊，不犧牲大螢幕的留白 ---------- */
+  @media(max-height:780px) and (min-width:821px){
+    .slide{padding-top:76px;padding-bottom:46px;}
+    h1{font-size:clamp(30px,4.6vw,50px);line-height:1.22;}
+    h2{font-size:clamp(24px,3.3vw,37px);line-height:1.26;}
+    .lead{font-size:clamp(15px,1.5vw,16.5px);line-height:1.7;}
+    .qrow{padding:9px 0;}
+    .qrow .l{font-size:15px;}
+    .qrow .l small{font-size:12px;margin-top:2px;}
+    .qrow .v{font-size:15.5px;}
+    .stat{font-size:clamp(56px,10vw,120px);}
+    .cell .d{font-size:13px;line-height:1.7;}
+    .tnode li{font-size:12.5px;line-height:1.6;}
+    .pv-side .why li{font-size:14px;line-height:1.65;}
+    .frame{max-height:48svh;}
+  }
+
   /* ---------- reveal ---------- */
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease);}
   .reveal.in{opacity:1;transform:none;}
