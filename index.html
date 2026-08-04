@@ -150,8 +150,10 @@
   /* ---------- preview (image + text) ---------- */
   .pv-wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(26px,4.5vw,58px);align-items:center;text-align:left;margin-top:clamp(20px,3.6vh,40px);}
   @media(max-width:820px){.pv-wrap{grid-template-columns:1fr;}}
+  /* width:100% 不可省略——.frame 是 grid item,內容全是 absolute,
+     一旦寬度改由內容決定(例如加了 auto margin)整個框會塌成 0 */
   .frame{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--placeholder);
-    position:relative;aspect-ratio:4/3;max-height:56svh;margin:0 auto;}
+    position:relative;width:100%;aspect-ratio:4/3;max-height:56svh;}
   .frame>img.bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
   /* 掛在牆上的畫（示意 AI 居家擺放模擬） */
   .hang{position:absolute;left:50%;top:31%;transform:translate(-50%,-50%);width:34%;aspect-ratio:1;
